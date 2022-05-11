@@ -1,0 +1,14 @@
+asgiref==3.5.0
+Django==4.0.2
+django-cors-headers==3.11.0
+django-rest-framework==0.1.0
+djangorestframework==3.13.1
+djangorestframework-simplejwt==5.0.0
+factory-boy==3.2.1
+Faker==12.3.3
+PyJWT==2.3.0
+python-dateutil==2.8.2
+pytz==2021.3
+six==1.16.0
+sqlparse==0.4.2
+tzdata==2021.5
