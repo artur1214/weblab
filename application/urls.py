@@ -12,10 +12,7 @@ urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
-urlpatterns += [
-    path('steam/', VkTokenObtainPairView.as_view(), name='steam_token_obtain_pair'),
-    #path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-]
+
 urlpatterns += [
     path('vk_token/', get_vk_token, name='vk_token_obtain_pair'),
     #path('', TokenRefreshView.as_view(), name='token_refresh'),
@@ -24,8 +21,6 @@ urlpatterns += [
 
 LIST = {
     'get': 'list',
-    #'update': 'partial_update',
-    #'put': 'update',
     'post': 'create'
 }
 

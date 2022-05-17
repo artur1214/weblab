@@ -3,8 +3,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-# Create your models here.
-
 class User(AbstractUser):
     steam_user_id = models.CharField(max_length=100, null=True)
     vk_id = models.CharField(max_length=25, null=True, unique=True)
@@ -36,6 +34,3 @@ class Medicine(models.Model):
 
     class Meta:
         app_label = 'application'
-
-
-

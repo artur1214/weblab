@@ -1,13 +1,10 @@
 import requests
-from django.contrib.auth import get_user_model, login
 from django.core.handlers.wsgi import WSGIRequest
 from django.http import HttpResponse, JsonResponse
-from rest_framework import permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-
 from django.conf import settings
 
 from .models import Medicine, TypeChoices, User

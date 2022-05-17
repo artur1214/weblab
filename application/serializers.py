@@ -15,21 +15,16 @@ class VkTokenObtainPairSerializer(TokenObtainPairSerializer):
         print(type(token))
         token['vk_id'] = user.vk_id
         del token['user_id']
-        # print(token, user)
-        # ...
         return token
 
     def validate(self, attrs):
         data = super().validate(attrs)
-
         refresh = self.get_token(self.user)
-
         data['refresh'] = str(refresh)
         data['access'] = str(refresh.access_token)
 
         if api_settings.UPDATE_LAST_LOGIN:
             update_last_login(None, self.user)
-
         return data
 
 
